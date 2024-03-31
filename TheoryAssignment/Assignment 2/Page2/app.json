@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "LabTaskChessBoard",
-    "slug": "LabTaskChessBoard",
+    "name": "Page2",
+    "slug": "Page2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
