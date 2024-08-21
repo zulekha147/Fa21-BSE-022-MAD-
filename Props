@@ -1,0 +1,63 @@
+import { Text, View, StyleSheet, Button } from 'react-native';
+import React, { useState } from 'react';
+
+export default function App() {
+  const something = () => {
+    console.warn('gjhasgdjhas');
+  };
+  const [name, setname] = useState('ali');
+  const [age, setage] = useState('15');
+  const [department, setdepartment] = useState('BSSE');
+
+  const testName = () => {
+    setname('Zuli');
+  };
+
+  const testage = () => {
+    setage(23);
+  };
+
+  const testdepartment = () => {
+    setdepartment('BSCS');
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.Text}>props in React Native</Text>
+      <Text style={styles.Text}>{name}</Text>
+      <Text style={styles.Text}>{age}</Text>
+      <Text style={styles.Text}>{department}</Text>
+
+      <Button title="Update name" onPress={testName}></Button>
+      <Button title="Update age" onPress={testage}></Button>
+      <Button title="Update department" onPress={testdepartment}></Button>
+    </View>
+  );
+}
+const user = (props) => {
+  return (
+    <View>
+      <Text>{props.name}</Text>
+      <Text>{props.age}</Text>
+      <Text>{props.department}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  },
+  Text: {
+    backgroundColor: 'green',
+    borderRadius: 12,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginBottom: 10,
+    marginTop: 5,
+  },
+});
+
